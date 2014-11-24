@@ -1,0 +1,10 @@
+%h2 Details about #{@album.name}
+%ul#details
+  %li
+    Created:
+    = @album.created
+  %li
+    Comments:
+    =@album.comments
+=link_to 'Back to albums list', albums_path
+

@@ -1,2 +1,16 @@
-%h1 Albums#index
+%h1 All Albums
 %p Find me in app/views/albums/index.html.haml
+%table#albums
+  %thead
+    %tr
+      %th Name
+      %th Created on
+      %th Comments
+      %th Links
+    %tbody
+      - @albums.each do |album|
+        %tr
+          %td= album.name
+          %td= album.created.strftime("%B %d,%y")
+          %td= album.comments
+          %td= link_to "More about #{album.name} album", album_path(album)

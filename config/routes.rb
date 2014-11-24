@@ -1,15 +1,7 @@
 Rails.application.routes.draw do
-  get 'albums/new'
-
-  get 'albums/index'
-
-  get 'albums/create'
-
-  get 'albums/update'
-
-  get 'albums/edit'
-
-  get 'testing/hello'
+  resources :albums do
+    resources :photos
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

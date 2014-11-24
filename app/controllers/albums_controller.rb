@@ -3,6 +3,7 @@ class AlbumsController < ApplicationController
   end
 
   def index
+    @albums = Album.all
   end
 
   def create
@@ -12,5 +13,9 @@ class AlbumsController < ApplicationController
   end
 
   def edit
+  end
+  def show
+    id = params[:id]
+    @album = Album.find(id)
   end
 end
