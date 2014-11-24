@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'albums/new'
+
+  get 'albums/index'
+
+  get 'albums/create'
+
+  get 'albums/update'
+
+  get 'albums/edit'
+
   get 'testing/hello'
 
   # The priority is based upon order of creation: first created -> highest priority.
