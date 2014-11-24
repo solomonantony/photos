@@ -13,9 +13,13 @@ class AlbumsController < ApplicationController
   
 
   def update
+    @album = Album.find params[:id]
+    @album.update_attributes!(album_params)
+    redirect_to album_path(@album)
   end
 
   def edit
+    @album = Album.find params[:id]
   end
   def show
     id = params[:id]

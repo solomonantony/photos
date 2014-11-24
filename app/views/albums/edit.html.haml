@@ -1,2 +1,11 @@
 %h1 Albums#edit
+%h2 Edit Album information
 %p Find me in app/views/albums/edit.html.haml
+= form_tag album_path(@album), :method => :put do
+  = label :album, :name, 'Name'
+  = text_field :album, :name
+  = label :album , :created, 'Created on' 
+  = date_select :album, :created
+  = label :album, :comments, 'Comments'
+  = text_area :album, :comments, size: "24x6"
+  = submit_tag 'Save changes'
