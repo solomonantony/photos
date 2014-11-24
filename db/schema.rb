@@ -11,23 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118053657) do
+ActiveRecord::Schema.define(version: 20141122014304) do
 
   create_table "albums", force: true do |t|
     t.string   "name"
     t.datetime "created"
-    t.integer  "size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "comments"
   end
 
   create_table "photos", force: true do |t|
     t.integer  "album_id"
-    t.datetime "shot"
     t.string   "caption"
     t.integer  "size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "snapped"
   end
 
 end

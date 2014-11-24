@@ -5,26 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-more_albums = [
-  {:name => 'Birthday',
-    :created => '1/1/2014',
-    :comments => 'Awesome birthday party'},
-  {
-    :name => 'Graduation',
-    :created => '7/1/2014',
-    :comments => "So long Murray State"
-  },
-  {
-    :name => 'Picnic',
-    :created => '8/1/2014',
-    :comments => "Had a nice time by lakeside with friends"
-  }
-]
-
-more_albums.each do |album|
-  Album.create!(album)
-end
-
-more_photos = [
-  
-]
