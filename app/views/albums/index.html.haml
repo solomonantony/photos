@@ -14,3 +14,4 @@
           %td= album.created.strftime("%B %d,%y")
           %td= album.comments
           %td= link_to "More about #{album.name} album", album_path(album)
+=link_to 'Add new album', new_album_path

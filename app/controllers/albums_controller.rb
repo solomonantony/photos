@@ -7,7 +7,10 @@ class AlbumsController < ApplicationController
   end
 
   def create
+    @album = Album.create(album_params)
+    redirect_to albums_path
   end
+  
 
   def update
   end
@@ -17,5 +20,9 @@ class AlbumsController < ApplicationController
   def show
     id = params[:id]
     @album = Album.find(id)
+  end
+  private
+  def album_params
+      params.require(:album).permit(:name, :created, :comments)
   end
 end
