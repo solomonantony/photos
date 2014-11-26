@@ -1,0 +1,11 @@
+%h1 Photos#new
+%p Find me in app/views/photos/new.html.haml
+%h2 Create a new Photo
+= form_tag album_photos_path, :method => :post do
+  = label :photo, :caption, 'Caption'
+  = text_field :photo, :caption
+  = label :photo , :snapped, 'Snapped on' 
+  = date_select :photo, :snapped
+  = label :photo, :size, 'size in pixels'
+  = text_field :photo, :size, size: "24x6"
+  = submit_tag 'Save changes'
