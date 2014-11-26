@@ -1,2 +1,18 @@
 %h1 Photos#index
 %p Find me in app/views/photos/index.html.haml
+%table#photos
+  %thead
+    %tr
+      %th Caption
+      %th Snapped on
+      %th Comments
+      %th Size
+    %tbody
+      - @photos.each do |photo|
+        %tr
+          %td= photo.caption
+          %td= photo.snapped.strftime("%B %d,%y")
+          %td= photo.size
+          %td= link_to "Edit photo information", edit_album_photo_path(photo.album, photo)
+=link_to 'Add new photo', new_album_photo_path(@album)
+

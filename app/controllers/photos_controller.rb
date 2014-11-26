@@ -6,8 +6,9 @@ class PhotosController < ApplicationController
   end
 
   def index
+    @album = Album.find(params[:album_id])
+    @photos = Photo.where(album_id: params[:album_id])
   end
-
   def update
   end
 

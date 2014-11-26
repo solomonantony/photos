@@ -1,2 +1,11 @@
 %h1 Photos#edit
 %p Find me in app/views/photos/edit.html.haml
+%h2 Create a new Photo
+= form_tag album_photo_path(@photo), :method => :put do
+  = label :photo, :caption, 'Caption'
+  = text_field :photo, :caption
+  = label :photo , :snapped, 'Snapped on' 
+  = date_select :photo, :snapped
+  = label :photo, :size, 'size in pixels'
+  = text_field :photo, :size, size: "24x6"
+  = submit_tag 'Save changes'
