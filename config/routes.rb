@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  get 'photos/new'
-
-  get 'photos/edit'
-
-  get 'photos/index'
-
-  get 'photos/update'
-
-  get 'photos/create'
 
   resources :albums do
     resources :photos
