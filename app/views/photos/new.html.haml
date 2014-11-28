@@ -1,7 +1,8 @@
 %h1 Photos#new
-%p Find me in app/views/photos/new.html.haml
+%p 
+="Adding a new photo to " + @album.name + " album" 
 %h2 Create a new Photo
-= form_tag album_photos_path, :method => :post do
+= form_tag album_photos_path(@album), :method => :post do
   = label :photo, :caption, 'Caption'
   = text_field :photo, :caption
   = label :photo , :snapped, 'Snapped on' 

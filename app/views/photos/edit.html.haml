@@ -1,7 +1,7 @@
 %h1 Photos#edit
 %p Find me in app/views/photos/edit.html.haml
-%h2 Create a new Photo
-= form_tag album_photo_path(@photo), :method => :put do
+%h2 Editing Photo
+= form_tag album_photo_path(photo_id: @photo.id), :method => :put do
   = label :photo, :caption, 'Caption'
   = text_field :photo, :caption
   = label :photo , :snapped, 'Snapped on' 
